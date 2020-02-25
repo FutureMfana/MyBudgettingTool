@@ -1,0 +1,9 @@
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\MyBudgettingTool.exe.config
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.HomeForm.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.Properties.Resources.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.csproj.GenerateResource.Cache
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\MyBudgettingTool.exe
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\MyBudgettingTool.pdb
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.exe
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.pdb
