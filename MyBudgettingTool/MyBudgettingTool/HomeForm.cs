@@ -205,7 +205,67 @@ namespace MyBudgettingTool
         #region btnRemoveItem_Click()
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string delResult;
+                if (cboIDRemove.SelectedIndex < 0 && cboYearDelete.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please delete by Month or/and by Year ", "Encounted an error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+               if (cboIDRemove.SelectedIndex >= 0 && cboYearDelete.SelectedIndex >= 0)
+                {
+                    if (MessageBox.Show("Are you sure you want to delete some of this data?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        delResult = bc.DeleteByYearAndMonth(Convert.ToInt16(cboYear.SelectedItem), cboIDRemove.SelectedIndex + 1);
+                        if (delResult.ToLower().Equals("true"))
+                        {
+                            MessageBox.Show("Data deleted successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            throw new Exception("\nCouldn't delete data\n");
+                        }
+                    }
+                    return;
+                }
+               if (cboIDRemove.SelectedIndex >= 0) {
+                    if (MessageBox.Show("Are you sure you want to delete some of this data?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        delResult = bc.DeleteByMonth(cboIDRemove.SelectedIndex + 1);
+                        if (delResult.ToLower().Equals("true"))
+                        {
+                            MessageBox.Show("Data deleted successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            throw new Exception("\nCouldn't delete data\n");
+                        }
+                    }
+                    return;
+                }
+                if (cboYearDelete.SelectedIndex >= 0)
+                {
+                    if (MessageBox.Show("Are you sure you want to delete some of this data?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        delResult = bc.DeleteByYear(Convert.ToInt16(cboYearDelete));
+                        if (delResult.ToLower().Equals("true"))
+                        {
+                            MessageBox.Show("Data deleted successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            throw new Exception("\nCouldn't delete data\n");
+                        }
+                    }
+                    return;
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Encounted an error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
         #endregion
 

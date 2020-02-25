@@ -261,7 +261,7 @@ namespace MyBudgettingTool
         #endregion
 
         #region DeleteByYear()
-        public string DeleteByYearAndMonth(int year)
+        public string DeleteByYear(int year)
         {
             try
             {
