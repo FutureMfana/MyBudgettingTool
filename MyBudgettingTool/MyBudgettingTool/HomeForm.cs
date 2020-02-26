@@ -79,6 +79,8 @@ namespace MyBudgettingTool
             {
                 throw new Exception("Data not found!");
             }
+            dgvBudget.DataSource = ds.Tables[0];
+            dgvBudget.Refresh();
         }
         #endregion
 
@@ -181,21 +183,26 @@ namespace MyBudgettingTool
                 else {
                     throw new Exception("Couldn't add data");
                 }
+                txtExpenditure.Text = "";
+                txtPrice.Text = "";
+
+                if (cboMonth.SelectedIndex >= 0 && cboYear.SelectedIndex >= 0)
+                {
+                    showDataByMonthAndYear();
+                    return;
+                }
+
                 if (cboMonth.SelectedIndex >= 0)
                 {
                     showDataByMonth();
-                    if (cboYear.SelectedIndex >= 0)
-                    {
-                        showDataByMonthAndYear();
-                    }
-                }else if (cboYear.SelectedIndex >= 0) {
-                    showDataByMonthAndYear();
-                    if (cboMonth.SelectedIndex >= 0)
-                    {
-                        showDataByMonth();
-                    }
+                    return;
                 }
-                dgvBudget.Refresh();
+
+                if (cboYear.SelectedIndex >= 0)
+                {
+                    showDataByYear();
+                    return;
+                }
             }
             catch (Exception ex)
             {
