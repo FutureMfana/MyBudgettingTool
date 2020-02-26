@@ -45,17 +45,15 @@ namespace MyBudgettingTool
                 da = new SqlDataAdapter(sql, sqlCon);
                 da.Fill(ds, "Bugdet");
                 da.Dispose();
-            }
-            catch (Exception ex)
-            {
-                //pass
-            }
-            finally
-            {
+
                 if (sqlCon.State == ConnectionState.Open)
                 {
                     sqlCon.Close();
                 }
+            }
+            catch (Exception ex)
+            {
+                //pass
             }
             return ds;
         }
@@ -77,7 +75,7 @@ namespace MyBudgettingTool
                 da.Fill(ds);
                 da.Dispose();
 
-                if (sqlCon.State == ConnectionState.Closed)
+                if (sqlCon.State == ConnectionState.Open)
                 {
                     sqlCon.Close();
                 }
@@ -96,7 +94,7 @@ namespace MyBudgettingTool
             DataSet ds = new DataSet();
             try
             {
-                sql = $"SELECT * Year2020.My2020Budget WHERE Month = {month}";
+                sql = $"SELECT * FROM Year2020.My2020Budget WHERE Month = {month}";
                 if (sqlCon.State == ConnectionState.Closed)
                 {
                     sqlCon.Open();
@@ -106,7 +104,7 @@ namespace MyBudgettingTool
                 da.Fill(ds, "DataByMonth");
                 da.Dispose();
 
-                if (sqlCon.State == ConnectionState.Closed)
+                if (sqlCon.State == ConnectionState.Open)
                 {
                     sqlCon.Close();
                 }
@@ -125,7 +123,7 @@ namespace MyBudgettingTool
             DataSet ds = new DataSet();
             try
             {
-                sql = $"SELECT * Year2020.My2020Budget WHERE Year = {year}";
+                sql = $"SELECT* FROM Year2020.My2020Budget WHERE Year = {year}";
                 if (sqlCon.State == ConnectionState.Closed)
                 {
                     sqlCon.Open();
@@ -135,7 +133,7 @@ namespace MyBudgettingTool
                 da.Fill(ds, "DataByYear");
                 da.Dispose();
 
-                if (sqlCon.State == ConnectionState.Closed)
+                if (sqlCon.State == ConnectionState.Open)
                 {
                     sqlCon.Close();
                 }
@@ -164,7 +162,7 @@ namespace MyBudgettingTool
                 da.Fill(ds, "DataByYearAndMont");
                 da.Dispose();
 
-                if (sqlCon.State == ConnectionState.Closed)
+                if (sqlCon.State == ConnectionState.Open)
                 {
                     sqlCon.Close();
                 }
@@ -265,7 +263,7 @@ namespace MyBudgettingTool
         {
             try
             {
-                sql = $"DELETE FROM Year2020.MyBudget WHERE Year = {year}";
+                sql = $"DELETE FROM Year2020.MyBudget WHERE Year_ = {year}";
                 if (sqlCon.State == ConnectionState.Closed)
                 {
                     sqlCon.Open();

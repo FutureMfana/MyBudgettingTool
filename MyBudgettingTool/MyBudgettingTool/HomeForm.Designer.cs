@@ -293,6 +293,7 @@
             this.cboYearDelete.Name = "cboYearDelete";
             this.cboYearDelete.Size = new System.Drawing.Size(332, 31);
             this.cboYearDelete.TabIndex = 8;
+            this.cboYearDelete.SelectedIndexChanged += new System.EventHandler(this.cboYearDelete_SelectedIndexChanged);
             // 
             // label6
             // 

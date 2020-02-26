@@ -104,6 +104,8 @@ namespace MyBudgettingTool
         {
             //Exceptions handled by the calling method
             var year = DateTime.Now.Year;
+            cboYearDelete.Items.Add((year + 1).ToString());
+            cboYear.Items.Add((year + 1).ToString());
             do
             {
                 cboYearDelete.Items.Add(year.ToString());
@@ -139,7 +141,7 @@ namespace MyBudgettingTool
         {
             try
             {
-                if (cboMonth.SelectedIndex == 0)
+                if (cboMonth.SelectedIndex < 0)
                 {
                     showDataByYear();
                 }
@@ -248,7 +250,7 @@ namespace MyBudgettingTool
                 {
                     if (MessageBox.Show("Are you sure you want to delete some of this data?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        delResult = bc.DeleteByYear(Convert.ToInt16(cboYearDelete));
+                        delResult = bc.DeleteByYear(Convert.ToInt16(cboYearDelete.SelectedItem));
                         if (delResult.ToLower().Equals("true"))
                         {
                             MessageBox.Show("Data deleted successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -291,5 +293,10 @@ namespace MyBudgettingTool
             }
         }
         #endregion
+
+        private void cboYearDelete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
