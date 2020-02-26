@@ -152,7 +152,7 @@ namespace MyBudgettingTool
             DataSet ds = new DataSet();
             try
             {
-                sql = $"SELECT * Year2020.My2020Budget WHERE Year = {year} AND Month = {month}";
+                sql = $"SELECT * FROM Year2020.My2020Budget WHERE Year = {year} AND Month = {month}";
                 if (sqlCon.State == ConnectionState.Closed)
                 {
                     sqlCon.Open();
