@@ -50,10 +50,17 @@
             this.cboIDRemove = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRemoveItem = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.cboReportYear = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cboReportMon = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBoxBudget.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBudget)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxBudget
@@ -352,16 +359,100 @@
             this.btnRemoveItem.UseVisualStyleBackColor = true;
             this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cboReportYear);
+            this.groupBox1.Controls.Add(this.btnReport);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.cboReportMon);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(895, 540);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(437, 186);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Reports";
+            // 
+            // btnReport
+            // 
+            this.btnReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReport.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Location = new System.Drawing.Point(11, 112);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(420, 38);
+            this.btnReport.TabIndex = 11;
+            this.btnReport.Text = "&Print Report";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // cboReportYear
+            // 
+            this.cboReportYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboReportYear.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboReportYear.FormattingEnabled = true;
+            this.cboReportYear.Location = new System.Drawing.Point(98, 75);
+            this.cboReportYear.Name = "cboReportYear";
+            this.cboReportYear.Size = new System.Drawing.Size(332, 31);
+            this.cboReportYear.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(5, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 24);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Select Year:";
+            // 
+            // cboReportMon
+            // 
+            this.cboReportMon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboReportMon.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboReportMon.FormattingEnabled = true;
+            this.cboReportMon.Items.AddRange(new object[] {
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"});
+            this.cboReportMon.Location = new System.Drawing.Point(98, 38);
+            this.cboReportMon.Name = "cboReportMon";
+            this.cboReportMon.Size = new System.Drawing.Size(332, 31);
+            this.cboReportMon.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(5, 41);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 24);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Select Month:";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1344, 738);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxBudget);
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "HomeForm";
             this.ShowIcon = false;
             this.Text = "My Budget Tool";
@@ -374,6 +465,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -402,6 +495,12 @@
         private System.Windows.Forms.ComboBox cboMonthAdd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox chkNextYear;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.ComboBox cboReportYear;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cboReportMon;
+        private System.Windows.Forms.Label label9;
     }
 }
 

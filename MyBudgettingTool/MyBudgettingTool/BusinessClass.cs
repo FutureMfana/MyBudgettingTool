@@ -20,7 +20,7 @@ namespace MyBudgettingTool
         {
             try
             {
-                sqlCon = new SqlConnection("Data Source=DESKTOP-G1E2CG2;Initial Catalog=Budget;Integrated Security=True");
+                sqlCon = new SqlConnection(@"Data Source=DESKTOP-G1E2CG2;Integrated Security=SSPI;Initial Catalog=Budget");
                 sqlCon.Open();
                 sqlCon.Close();
                 return "true";

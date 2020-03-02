@@ -7,3 +7,6 @@ C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudget
 C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\MyBudgettingTool.pdb
 C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.exe
 C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.pdb
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.Report.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\MyBudgettingTool.mdf
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\MyBudgettingTool_log.ldf

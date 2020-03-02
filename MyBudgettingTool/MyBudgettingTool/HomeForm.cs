@@ -106,10 +106,12 @@ namespace MyBudgettingTool
         {
             //Exceptions handled by the calling method
             var year = DateTime.Now.Year;
+            cboReportYear.Items.Add((year + 1).ToString());
             cboYearDelete.Items.Add((year + 1).ToString());
             cboYear.Items.Add((year + 1).ToString());
             do
             {
+                cboReportYear.Items.Add((year).ToString());
                 cboYearDelete.Items.Add(year.ToString());
                 cboYear.Items.Add(year--.ToString());
             } while (year > 2020);
@@ -236,9 +238,8 @@ namespace MyBudgettingTool
                             throw new Exception("\nCouldn't delete data\n");
                         }
                     }
-                    return;
                 }
-               if (cboIDRemove.SelectedIndex >= 0) {
+               else if (cboIDRemove.SelectedIndex >= 0) {
                     if (MessageBox.Show("Are you sure you want to delete some of this data?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         delResult = bc.DeleteByMonth(cboIDRemove.SelectedIndex + 1);
@@ -251,9 +252,8 @@ namespace MyBudgettingTool
                             throw new Exception("\nCouldn't delete data\n");
                         }
                     }
-                    return;
                 }
-                if (cboYearDelete.SelectedIndex >= 0)
+                else if (cboYearDelete.SelectedIndex >= 0)
                 {
                     if (MessageBox.Show("Are you sure you want to delete some of this data?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
@@ -267,8 +267,25 @@ namespace MyBudgettingTool
                             throw new Exception("\nCouldn't delete data\n");
                         }
                     }
-                    return;
                 }
+                #region just to refresh dgv
+                if (cboMonth.SelectedIndex > -1 && cboYear.SelectedIndex > -1)
+                {
+                    showDataByMonthAndYear();
+                }
+                else if (cboMonth.SelectedIndex > -1)
+                {
+                    showDataByMonth();
+                }
+                else if (cboYear.SelectedIndex > -1)
+                {
+                    showDataByYear();
+                }
+                else
+                {
+                    showAllData();
+                }
+                #endregion
 
             }
             catch (Exception ex)
@@ -292,7 +309,7 @@ namespace MyBudgettingTool
                     {
                         throw new Exception(delResults);
                     }
-                    dgvBudget.Refresh();
+                    showAllData();
                 }
             }catch (Exception ex)
             {
@@ -304,6 +321,24 @@ namespace MyBudgettingTool
         private void cboYearDelete_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            if (cboReportMon.SelectedIndex == -1)
+            {
+                MessageBox.Show("You're required to provide a month for your report","Required field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboReportMon.Focus();
+                return;
+            }else if (cboReportYear.SelectedIndex == -1) {
+                MessageBox.Show("You're required to provide a year for your report", "Required field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboReportYear.Focus();
+                return;
+            }
+            Report report = new Report();
+            report.yr = Convert.ToInt16(cboReportYear.SelectedItem);
+            report.mon = cboReportMon.SelectedIndex + 1;
+            report.Show();
         }
     }
 }
