@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBoxBudget = new System.Windows.Forms.GroupBox();
+            this.txtBalance = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.cboYear = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvBudget = new System.Windows.Forms.DataGridView();
@@ -51,8 +55,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnReport = new System.Windows.Forms.Button();
             this.cboReportYear = new System.Windows.Forms.ComboBox();
+            this.btnReport = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cboReportMon = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,6 +72,10 @@
             this.groupBoxBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxBudget.Controls.Add(this.txtBalance);
+            this.groupBoxBudget.Controls.Add(this.label11);
+            this.groupBoxBudget.Controls.Add(this.txtUsername);
+            this.groupBoxBudget.Controls.Add(this.label10);
             this.groupBoxBudget.Controls.Add(this.cboYear);
             this.groupBoxBudget.Controls.Add(this.label5);
             this.groupBoxBudget.Controls.Add(this.dgvBudget);
@@ -81,13 +89,49 @@
             this.groupBoxBudget.TabStop = false;
             this.groupBoxBudget.Text = "Budget";
             // 
+            // txtBalance
+            // 
+            this.txtBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBalance.Enabled = false;
+            this.txtBalance.Location = new System.Drawing.Point(721, 678);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.Size = new System.Drawing.Size(148, 29);
+            this.txtBalance.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(593, 681);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(122, 24);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Remaining balance:";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Enabled = false;
+            this.txtUsername.Location = new System.Drawing.Point(604, 28);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(265, 29);
+            this.txtUsername.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(525, 31);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 24);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Username:";
+            // 
             // cboYear
             // 
             this.cboYear.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboYear.FormattingEnabled = true;
-            this.cboYear.Location = new System.Drawing.Point(457, 28);
+            this.cboYear.Location = new System.Drawing.Point(357, 28);
             this.cboYear.Name = "cboYear";
-            this.cboYear.Size = new System.Drawing.Size(261, 31);
+            this.cboYear.Size = new System.Drawing.Size(162, 31);
             this.cboYear.TabIndex = 1;
             this.cboYear.SelectedIndexChanged += new System.EventHandler(this.cboYear_SelectedIndexChanged);
             // 
@@ -95,7 +139,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(364, 31);
+            this.label5.Location = new System.Drawing.Point(264, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 24);
             this.label5.TabIndex = 3;
@@ -115,7 +159,7 @@
             this.dgvBudget.Location = new System.Drawing.Point(10, 82);
             this.dgvBudget.Name = "dgvBudget";
             this.dgvBudget.RowTemplate.Height = 24;
-            this.dgvBudget.Size = new System.Drawing.Size(859, 625);
+            this.dgvBudget.Size = new System.Drawing.Size(859, 590);
             this.dgvBudget.TabIndex = 11;
             // 
             // cboMonth
@@ -136,7 +180,7 @@
             "Dec"});
             this.cboMonth.Location = new System.Drawing.Point(99, 28);
             this.cboMonth.Name = "cboMonth";
-            this.cboMonth.Size = new System.Drawing.Size(252, 31);
+            this.cboMonth.Size = new System.Drawing.Size(157, 31);
             this.cboMonth.TabIndex = 0;
             this.cboMonth.SelectedIndexChanged += new System.EventHandler(this.cboMonth_SelectedIndexChanged);
             // 
@@ -224,7 +268,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrice.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(6, 217);
             this.txtPrice.Name = "txtPrice";
@@ -300,7 +344,6 @@
             this.cboYearDelete.Name = "cboYearDelete";
             this.cboYearDelete.Size = new System.Drawing.Size(332, 31);
             this.cboYearDelete.TabIndex = 8;
-            this.cboYearDelete.SelectedIndexChanged += new System.EventHandler(this.cboYearDelete_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -375,6 +418,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reports";
             // 
+            // cboReportYear
+            // 
+            this.cboReportYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboReportYear.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboReportYear.FormattingEnabled = true;
+            this.cboReportYear.Location = new System.Drawing.Point(98, 75);
+            this.cboReportYear.Name = "cboReportYear";
+            this.cboReportYear.Size = new System.Drawing.Size(332, 31);
+            this.cboReportYear.TabIndex = 14;
+            // 
             // btnReport
             // 
             this.btnReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -386,16 +439,6 @@
             this.btnReport.Text = "&Print Report";
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
-            // cboReportYear
-            // 
-            this.cboReportYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboReportYear.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboReportYear.FormattingEnabled = true;
-            this.cboReportYear.Location = new System.Drawing.Point(98, 75);
-            this.cboReportYear.Name = "cboReportYear";
-            this.cboReportYear.Size = new System.Drawing.Size(332, 31);
-            this.cboReportYear.TabIndex = 14;
             // 
             // label8
             // 
@@ -501,6 +544,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboReportMon;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtBalance;
+        private System.Windows.Forms.Label label11;
     }
 }
 
