@@ -10,3 +10,7 @@ C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudget
 C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.Report.resources
 C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\MyBudgettingTool.mdf
 C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\MyBudgettingTool_log.ldf
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.UserRegistration.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\bin\Debug\WhatsAppApi.dll
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.UserLogin.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\MyBudgettingTool\MyBudgettingTool\obj\Debug\MyBudgettingTool.OTP.resources
