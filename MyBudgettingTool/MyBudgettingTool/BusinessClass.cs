@@ -329,7 +329,7 @@ namespace MyBudgettingTool
             {
                 //validate users' email address by mailing them
                 //if the app couldn't mail them, there is possibility that the email is invalid
-                string mailMsg = $"Dear {UserName}.<br><br>This is to notify you that you have successfully created account with MyBudgettingTool app.<br><br>Thank you for chosing<br><br>Regards, <br>215Devhelp Team<br><em>Kamvelihle Innocent<br>(+27)78 798 0344\nkamvelihleinnocent@gmai.com</em>";
+                string mailMsg = $"Dear {UserName}.<br><br>This is to notify you that you have successfully created account with MyBudgettingTool app.<br><br>Thank you for chosing us<br><br>Regards, <br><em>215Devhelp (Kamvelihle Innocent)<br>(+27)78 798 0344<br>kamvelihleinnocent@gmai.com</em>";
                 string mailRes = SendMail(EmailAddress, mailMsg, "Account created with My Budgetting Tool...");
                 if (!mailRes.ToLower().Equals("true"))
                 {
@@ -475,7 +475,7 @@ namespace MyBudgettingTool
                     throw new Exception("\n\nCouldn't ecrypt OTP. Something went wrong on the back end of the system.");
                 }
                 //we have to mail the OTP the user after it is generated before updating the table, just in case we couldn't email
-                string msg = $"Dear {username}.\r\n\nYour OTP is: <h1>{otp}</h1>\r\n\nKind Regards, \n215Devhelp (Kamvelihle Innocent)\n(+27)787980344\nkamvelihleinnocent@gmail.com";
+                string msg = $"Dear {username}.<br>Your OTP is: <h3>{otp}</h3><br><br>Kind Regards, <br><em>215Devhelp (Kamvelihle Innocent)<br>(+27)787980344<br>kamvelihleinnocent@gmail.com</em>";
                 string sub = "MyBudgettingTool OTP";
                 string mailRes = SendMail(email, msg, sub);
                 if (!mailRes.Equals("true")){
