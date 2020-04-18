@@ -219,7 +219,7 @@
             this.chkNextYear.Location = new System.Drawing.Point(343, 164);
             this.chkNextYear.Name = "chkNextYear";
             this.chkNextYear.Size = new System.Drawing.Size(88, 28);
-            this.chkNextYear.TabIndex = 4;
+            this.chkNextYear.TabIndex = 2;
             this.chkNextYear.Text = "Next Year";
             this.chkNextYear.UseVisualStyleBackColor = true;
             // 
@@ -242,7 +242,7 @@
             this.cboMonthAdd.Location = new System.Drawing.Point(11, 127);
             this.cboMonthAdd.Name = "cboMonthAdd";
             this.cboMonthAdd.Size = new System.Drawing.Size(420, 31);
-            this.cboMonthAdd.TabIndex = 3;
+            this.cboMonthAdd.TabIndex = 1;
             // 
             // label7
             // 
@@ -261,7 +261,7 @@
             this.btnAdd.Location = new System.Drawing.Point(6, 252);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(425, 38);
-            this.btnAdd.TabIndex = 6;
+            this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "&Add Item";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -273,7 +273,7 @@
             this.txtPrice.Location = new System.Drawing.Point(6, 217);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(425, 29);
-            this.txtPrice.TabIndex = 5;
+            this.txtPrice.TabIndex = 3;
             // 
             // txtExpenditure
             // 
@@ -282,7 +282,7 @@
             this.txtExpenditure.Location = new System.Drawing.Point(10, 62);
             this.txtExpenditure.Name = "txtExpenditure";
             this.txtExpenditure.Size = new System.Drawing.Size(421, 29);
-            this.txtExpenditure.TabIndex = 2;
+            this.txtExpenditure.TabIndex = 5;
             // 
             // label3
             // 
@@ -426,7 +426,7 @@
             this.cboReportYear.Location = new System.Drawing.Point(98, 75);
             this.cboReportYear.Name = "cboReportYear";
             this.cboReportYear.Size = new System.Drawing.Size(332, 31);
-            this.cboReportYear.TabIndex = 14;
+            this.cboReportYear.TabIndex = 1;
             // 
             // btnReport
             // 
@@ -435,7 +435,7 @@
             this.btnReport.Location = new System.Drawing.Point(11, 112);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(420, 38);
-            this.btnReport.TabIndex = 11;
+            this.btnReport.TabIndex = 2;
             this.btnReport.Text = "&Print Report";
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
@@ -472,7 +472,7 @@
             this.cboReportMon.Location = new System.Drawing.Point(98, 38);
             this.cboReportMon.Name = "cboReportMon";
             this.cboReportMon.Size = new System.Drawing.Size(332, 31);
-            this.cboReportMon.TabIndex = 13;
+            this.cboReportMon.TabIndex = 0;
             // 
             // label9
             // 
